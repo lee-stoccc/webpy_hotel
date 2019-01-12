@@ -1,0 +1,48 @@
+$def with (name)
+<body>
+<p style="text-align: center">hello, $name</p>
+
+<h1 id="h1" style="text-align: center"> Ajax Example</h1>
+<form action="" style="text-align: center">
+    Name:
+    <br>
+    <input type="text" name="user" id="name">
+    <br>
+    Password:
+    <br>
+    <input type="password" name="pass" id="pass">
+    <br>
+    Submit:
+    <br>
+    <button type="submit" id="sub">Login</button>
+</form>
+
+<script type="text/javascript" src="../../static/jquery-3.3.1.min.js"></script>
+<script>
+    $$(document).ready(function () {
+        // alert(1111)
+        $$('#sub').click(function () {
+            var name = $$('#name').val();
+            var pass = $$('#pass').val();
+            var data={
+                name:name,
+                pass:pass
+            };
+
+            $$.ajax({
+                url: 'http://localhost:8080/jsons',
+                type:"POST",
+                dataType:"json",
+                data:data,
+                success:function () {
+                    // alert("success")
+                    window.location.href="http://localhost:8080/jsons"
+                },
+                error:function () {
+                    alert("error")
+                }
+            })
+        })
+    })
+</script>
+</body>
