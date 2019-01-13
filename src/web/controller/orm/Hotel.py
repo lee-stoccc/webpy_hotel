@@ -2,6 +2,7 @@
 from sqlalchemy import *
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+import time
 import json
 
 Base = declarative_base()
@@ -48,13 +49,17 @@ class Hotel(Base):
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
 
-    # def user_to_json(self):
-    #     self.jsonDataRole = {}
-    #     self.jsonDataRole["UserID"] =self.UserID
-    #     self.jsonDataRole["UserDataRoleID"] = self.UserDataRoleID
-    #     self.jsonDataRole["Remark"] = self.Remark
-    #     # self.jsonUser["UserCode"] =self.UserName
-    #     return self.jsonDataRole
+    def hotel_to_json(self):
+        self.jsonDataRole = {}
+        self.jsonDataRole["HotelID"] =self.HotelID
+        self.jsonDataRole["HotelCode"] = self.HotelCode
+        self.jsonDataRole["HotelName"] = self.HotelName
+        self.jsonDataRole["ProvinceID"] =self.ProvinceID
+        self.jsonDataRole["CityID"] = self.CityID
+        self.jsonDataRole["DistrictID"] = self.DistrictID
+        if self.RegStartTime:
+            self.jsonDataRole["RegStartTime"] = self.RegStartTime.strftime("%Y-%m-%d")    # datetime转 字符串
+        return self.jsonDataRole
 
 
 def init_db():

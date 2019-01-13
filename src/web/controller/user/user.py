@@ -23,7 +23,7 @@ class AddUser(object):
 class DelUser(object):
     def POST(self):
         session = User.DBSession()
-        target = session.query(User).filter(User.id >= 1).all()
+        target = session.query(User).filter(User.UserID >= 1).all()
         for v in target:
             session.delete(v)
             session.commit()

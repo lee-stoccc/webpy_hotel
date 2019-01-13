@@ -5,6 +5,7 @@ from web.controller.login.login import Login
 from web.controller.index.index import Index
 from web.controller.Jsons.jsonEx import JsonEx
 from web.controller.user.user import AddUser, DelUser, SearchUser, SearchUserRole
+from web.controller.Hotel.hotel import SearchHotel
 
 
 # render = web.template.render('templates/second')
@@ -25,7 +26,8 @@ urls = (
     '/adduser', AddUser,
     "/deluser", DelUser,
     "/user/searchuser", SearchUser,
-    "/user/SearchUserRole", SearchUserRole
+    "/user/SearchUserRole", SearchUserRole,
+    "/hotel/searchhotel", SearchHotel
 )
 app = web.application(urls, globals())
 
