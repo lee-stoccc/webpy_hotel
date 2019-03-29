@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2847c834-adfa-4d6a-bc73-177273e2945c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/web/controller/CheckIn/CheckIn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/web/controller/CheckIn/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/web/controller/imgUpload/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/web/controller/imgUpload/h.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/web/controller/imgUpload/imgUpload.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/web/controller/upload/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/web/controller/upload/upload.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web/controller/Hotel/hotel.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/controller/Hotel/hotel.py" afterDir="false" />
-    </list>
+    <list default="true" id="2847c834-adfa-4d6a-bc73-177273e2945c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+            <state relative-caret-position="79">
+              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
               <folding>
                 <element signature="e#16#26#0" expanded="true" />
               </folding>
@@ -112,10 +101,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="122" />
-    <option name="y" value="46" />
-    <option name="width" value="1366" />
-    <option name="height" value="675" />
+    <option name="y" value="28" />
+    <option name="width" value="1378" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -136,25 +124,6 @@
               <item name="webdev_deom" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="webdev_deom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev_deom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev_deom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev_deom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webdev_deom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webdev_deom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -164,7 +133,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hpsapi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../webdev" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -322,11 +291,12 @@
       <workItem from="1553571384389" duration="277000" />
       <workItem from="1553579008690" duration="598000" />
       <workItem from="1553755418533" duration="19000" />
+      <workItem from="1553864918828" duration="48000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4560000" />
+    <option name="totallyTimeSpent" value="4608000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -340,7 +310,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="750" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4983871" visible="true" weight="0.22768533" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983871" visible="true" weight="0.23146747" />
       <window_info id="Structure" order="1" sideWeight="0.50080514" side_tool="true" weight="0.21482602" />
       <window_info id="Favorites" order="2" sideWeight="0.5016129" side_tool="true" weight="0.18532526" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -354,7 +324,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.4064516" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.53409094" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.5332253" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32580644" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -670,8 +640,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        <state relative-caret-position="79">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
           <folding>
             <element signature="e#16#26#0" expanded="true" />
           </folding>
