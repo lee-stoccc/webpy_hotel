@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>上传图片</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="file" name="" id="upimg" accept="*">
+	<button onclick="upload()">上传</button>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function upload () {
+			var formData = new FormData();
+			var file = $('#upimg')[0].files[0];
+			formData.append('image', file);
+			formData.append('basePath','qqqqqqqqqqqqq')
+			$.ajax({
+				url: 'http://10.3.15.36:8090/api/Hotel/UploadImg',
+				type: 'POST',
+				cache: false,
+				data: formData,
+				processData: false,
+				contentType: false,
+				success: function (data) {
+					console.log('成功了');
+					console.log(data);
+				},
+				error: function (data) {
+					console.log('失败了');
+					console.log(data);
+				}
+			})
+		}
+	</script>
+</body>
+</html>

@@ -11,30 +11,35 @@ from sqlalchemy import *
 
 
 # 时间日期
-class SearchHotel(object):
+class SearchAllCheckInList(object):
     def POST(self):
-        Params = web.input()
+        Params = web.input('nHotelDocType')
+        web.input('nDocType')
+        web.input('sGuestDocNameLike')
+        web.input('sHotelName')
+        web.input('nSex')
+
         Query = Hotel.session.query(Hotel)
-        if self.verify('HotelID', Params):
+        if Params['HotelID']:
             Query = Query.filter(Hotel.HotelID == Params['HotelID'])
-        if self.verify('nProvinceID', Params):
+        if Params['nProvinceID']:
             Query = Query.filter(Hotel.ProvinceID == Params['nProvinceID'])
-        if self.verify('nCityID', Params):
+        if Params['nCityID']:
             Query = Query.filter(Hotel.CityID == Params['nCityID'])
-        if self.verify('nDistrictID', Params):
+        if Params['nDistrictID']:
             Query = Query.filter(Hotel.DistrictID == Params['nDistrictID'])
-        if self.verify('sHotelCode', Params):
+        if Params['sHotelCode']:
             Query = Query.filter(Hotel.HotelCode.like("%" + Params['sHotelCode'] + "%"))
-        if self.verify('sHotelName', Params):
+        if Params['sHotelName']:
             Query = Query.filter(Hotel.HotelName.like("%" + Params['sHotelName'] + "%"))
-        if self.verify('sRegStartDate', Params):
+        if Params['sRegStartDate']:
             sRegStartDate = Utils().strDataToData(Params['sRegStartDate'])
             Query = Query.filter(Hotel.RegStartTime >= sRegStartDate)
-        if self.verify('sRegEndDate', Params):
+        if Params['sRegEndDate']:
             Query = Query.filter(Hotel.RegStartTime <= Params['sRegEndDate'])
         lsQueryData = Query.limit(20).offset(0).all()
         lsDataList = []
-        for objQueryData in lsQueryData:  # 统计酒店的订单数
+        for objQueryData in lsQueryData:    # 统计酒店的订单数
             global objData
             objData = objQueryData.hotel_to_json()
             global lsCheckinCount
@@ -51,10 +56,6 @@ class SearchHotel(object):
 
         return json.dumps({"code": 200, "data": lsDataList})
 
-    def verify(self, key, Params):
-        if key in Params and Params.get(key) != '':
-            return true
-
 
 class CheckinCount(object):
     def POST(self, HotelID):
@@ -62,6 +63,7 @@ class CheckinCount(object):
             join(CheckIn, Hotel.HotelID == CheckIn.HotelID). \
             filter(Hotel.HotelID == HotelID).group_by(Hotel.HotelID).first()
         return objQueryData
+
 
 # class GuestCount(object):
 #     def POST(self, CheckInID):
